@@ -1,0 +1,5 @@
+$(P)$(R)Type
+$(P)$(R)NewSizeX
+$(P)$(R)NewSizeY
+$(P)$(R)HexPitch
+file "NDPluginBase_settings.req", P=$(P), R=$(R)

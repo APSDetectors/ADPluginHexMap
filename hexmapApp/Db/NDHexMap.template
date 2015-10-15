@@ -1,0 +1,68 @@
+#=================================================================#
+# Template file: NDHexMap.template
+
+include "NDPluginBase.template"
+
+record(mbbo, "$(P)$(R)Type")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))HEXMAP_TYPE")
+   field(ZRST, "None")
+   field(ZRVL, "0")
+   field(ONST, "HexToSquare")
+   field(ONVL, "1")
+   #field(TWST, "SquareToHex")
+   #field(TWVL, "2")
+   info(autosaveFields, "VAL")
+}
+
+record(longout, "$(P)$(R)NewSizeX")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))NEW_SIZE_X")
+   field(VAL,  "1")
+   info(autosaveFields, "VAL")
+}
+
+record(longin, "$(P)$(R)NewSizeX_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))NEW_SIZE_X")
+   field(SCAN, "I/O Intr")
+}
+
+record(longout, "$(P)$(R)NewSizeY")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))NEW_SIZE_Y")
+   field(VAL,  "1")
+   info(autosaveFields, "VAL")
+}
+
+record(longin, "$(P)$(R)NewSizeY_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))NEW_SIZE_Y")
+   field(SCAN, "I/O Intr")
+}
+
+record(ao, "$(P)$(R)HexPitch")
+{
+   field(DTYP, "asynFloat64")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))HEX_PITCH")
+   field(PREC, "3")
+   field(VAL,  "0.1")
+   field(DRVL,"0.000000000001")
+}
+
+record(ai, "$(P)$(R)HexPitch_RBV")
+{
+   field(DTYP, "asynFloat64")
+   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))HEX_PITCH")
+   field(PREC, "3")
+   field(SCAN, "I/O Intr")
+}
+
