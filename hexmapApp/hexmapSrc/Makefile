@@ -19,7 +19,7 @@ LIBRARY_IOC += NDPluginHexMap
 
 NDPluginHexMap_SRCS += NDPluginHexMap.cpp
 
-include $(AREA_DETECTOR)/ADCore/ADApp/commonLibraryMakefile
+include $(ADCORE)/ADApp/commonLibraryMakefile
 
 include $(TOP)/configure/RULES
 #----------------------------------------

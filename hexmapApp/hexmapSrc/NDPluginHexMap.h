@@ -36,7 +36,7 @@ protected:
 
 private:
     size_t userDims_[ND_ARRAY_MAX_DIMS];
-    void HexMapImage(NDArray *inArray, NDArray *outArray, NDArrayInfo_t *arrayInfo);
+    NDArray* HexMapImage(NDArray *inArray, NDArrayInfo_t *arrayInfo);
 };
 #define NUM_HEXMAP_PARAMS ((int)(&LAST_HEXMAP_PARAM - &FIRST_HEXMAP_PARAM + 1))
 
